@@ -7,7 +7,7 @@ from numpy import random
 import gensim
 import nltk
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer, TfidataVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 
 
 
-data = pd.read_csv('/Users/jeff/Documents/ML2/CarTalk_Topic_Attributes_5.csv')
+data = pd.read_csv('/Users/jeff/Documents/Cartalk_eda/CarTalk_Topic_Attributes_5.csv')
 # print(data.shape) #prints row and column quantity in that order
 data = data[[ 'Unnamed: 0', 'Topic Title', 'Category', 'Tags', 'Commenters',
         'Leading Comment', 'Other Comments', 'Likes', 'Views']]
